@@ -47,8 +47,8 @@ const sorter = new HTMLDragSort('#container', { /* ...options */ });
 
 ## Events
 
-| Event       | Argument | Description |
-|-------------|----------|-------------|
-| `dragStart` | `event`  | 
-| `sort`      | `event`  |
-| `dragEnd`   | `event`  | 
+| Event       | Argument    | Description |
+|-------------|-------------|-------------|
+| `dragStart` | `SortEvent` | 
+| `sort`      | `SortEvent` |
+| `dragEnd`   | `SortEvent` | 
