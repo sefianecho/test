@@ -47,6 +47,22 @@ const sorter = new HTMLDragSort('#container', { /* ...options */ });
 
 ## Events
 
+html-dragsort dispatches events during the drag-and-sort lifecycle. You can listen for them using `.on(event, callback)`
+Each event handler receives a `SortEvent` object with details like the item being dragged, placeholder, from/to indexes, and the container list.
+```javascript
+sorter.on("sort", (evt) => {
+  // Event type
+  evt.type
+  // Temporary element that occupies the position of the dragged item while sorting.
+  evt.placeholder
+  // Dragged element
+  evt.dragged
+  // 
+  evt.target
+});
+```
+
+
 | Event       | Argument    | Description |
 |-------------|-------------|-------------|
 | `dragStart` | `SortEvent` | 
