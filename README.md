@@ -37,13 +37,13 @@ const sorter = new HTMLDragSort('#container', { /* ...options */ });
 ```
 ## Options
 
-| Option      | Type               | Default | Description                                                                                                                             |
-|-------------|--------------------|---------|-----------------------------------------------------------------------------------------------------------------------------------------|
-| `draggable` | `string`           | `""`    | A CSS selector that defines which children of the container can be dragged.                                                             |
-| `handle`    | `string`           | `""`    | A CSS selector for a "drag handle" inside each draggable item.                                                                          |
-| `axis`      | `"x" | "y" | "xy"` | `"y"`   | Restricts the drag movement to a specific axis, for `xy` items can be dragged freely in both directions.                                |
-| `opacity`   | `number`           | `0`     | Sets the CSS opacity of the placeholder element while dragging. The value should be between 0 (fully transparent) and 1 (fully opaque). |
-| `disabled`  | `boolean`          | `false` | Disables drag-and-sort behavior when set to `true`.                                                                                     |
+| Option      | Type             | Default | Description                                                                                                                             |
+|-------------|------------------|---------|-----------------------------------------------------------------------------------------------------------------------------------------|
+| `draggable` | `string`         | `""`    | A CSS selector that defines which children of the container can be dragged.                                                             |
+| `handle`    | `string`         | `""`    | A CSS selector for a "drag handle" inside each draggable item.                                                                          |
+| `axis`      | `"x"\|"y"\|"xy"` | `"y"`   | Restricts the drag movement to a specific axis, for `xy` items can be dragged freely in both directions.                                |
+| `opacity`   | `number`         | `0`     | Sets the CSS opacity of the placeholder element while dragging. The value should be between 0 (fully transparent) and 1 (fully opaque). |
+| `disabled`  | `boolean`        | `false` | Disables drag-and-sort behavior when set to `true`.                                                                                     |
 
 ## Events
 
