@@ -78,4 +78,4 @@ sorter.on("sort", (evt) => {
 - setOptions(options: `DragSortOptions`) — Updates the configuration of the existing HTMLDragSort instance.
 - on(type: `EventType`, handler: `EventHandler`) — Attaches an event handler.
 - off(type?: `EventType`, handler?: `EventHandler`) — Detaches event handlers; omit `handler` to remove all handlers for an event, omit event `type` to remove all handlers entirely.
-- destroy() — 
+- destroy() — Removes event listeners attached to the container and cleans up the `HTMLDragSort` instance.
