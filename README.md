@@ -35,3 +35,12 @@ html-dragsort makes any container sortable by dragging its children. Just pass a
 ```javascript
 const sorter = new HTMLDragSort('#container', { /* ...options */ });
 ```
+## Options
+
+| Option      | Type               | Default | Description                                                                 |
+|-------------|--------------------|---------|-----------------------------------------------------------------------------|
+| `draggable` | `string`           | `""`    | A CSS selector that defines which children of the container can be dragged. |
+| `handle`    | `string`           | `""`    | 
+| `axis`      | `"x" | "y" | "xy"` | `"y"`   | 
+| `opacity`   | `number`           | `0`     | 
+| `disabled`  | `boolean`          | `false` | 
