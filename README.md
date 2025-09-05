@@ -67,10 +67,15 @@ sorter.on("sort", (evt) => {
   evt.list
 });
 ```
+| Event       | Argument    | Description                                                           |
+|-------------|-------------|-----------------------------------------------------------------------|
+| `dragStart` | `SortEvent` | Triggered as soon as the user starts dragging an item.                |
+| `sort`      | `SortEvent` | Fires whenever the dragged item is reordered within the container.    |
+| `dragEnd`   | `SortEvent` | Fires when the dragged item is dropped (the drag operation finishes). |
 
+## Methods
 
-| Event       | Argument    | Description                                                        |
-|-------------|-------------|--------------------------------------------------------------------|
-| `dragStart` | `SortEvent` | Triggered as soon as the user starts dragging an item.             |
-| `sort`      | `SortEvent` | Fires whenever the dragged item is reordered within the container. |
-| `dragEnd`   | `SortEvent` | 
+- setOptions(options: `DragSortOptions`) — Updates the configuration of the existing HTMLDragSort instance.
+- on(type: `EventType`, handler: `EventHandler`) — Attaches an event handler.
+- off(type?: `EventType`, handler?: `EventHandler`) — Detaches event handlers; omit `handler` to remove all handlers for an event, omit event `type` to remove all handlers entirely.
+- destroy() — 
