@@ -69,8 +69,8 @@ sorter.on("sort", (evt) => {
 ```
 
 
-| Event       | Argument    | Description |
-|-------------|-------------|-------------|
-| `dragStart` | `SortEvent` | 
-| `sort`      | `SortEvent` |
+| Event       | Argument    | Description                                                        |
+|-------------|-------------|--------------------------------------------------------------------|
+| `dragStart` | `SortEvent` | Triggered as soon as the user starts dragging an item.             |
+| `sort`      | `SortEvent` | Fires whenever the dragged item is reordered within the container. |
 | `dragEnd`   | `SortEvent` | 
