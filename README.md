@@ -57,8 +57,14 @@ sorter.on("sort", (evt) => {
   evt.placeholder
   // Dragged element
   evt.dragged
-  // 
+  // The target is the sortable element that the dragged item is currently hovering over during a drag operation.
   evt.target
+  // The original index of the dragged item before sorting began.
+  evt.from
+  // The new index of the dragged item after it has been reordered. (-1 if no reordering happened yet).
+  evt.to
+  // The sortable container element passed to HTMLDragSort.
+  evt.list
 });
 ```
 
