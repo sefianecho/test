@@ -122,7 +122,7 @@ const alwan = new Alwan('#reference', {
 | `opacity`        | `boolean`               | `true`         | Enables alpha channel for transparency.                                                                                                                                                 |
 | `preview`        | `boolean`               | `true`         | Adds a preview element for the selected color.                                                                                                                                          |
 | `copy`           | `boolean`               | `true`         | Adds a button to copy the selected color.                                                                                                                                               |
-| `swatches`       | `Swatch[]`              | `[]`           | Array of swatches, where each item is a color or an object with a color and optional label, invalid values default to #000.<br>See the [Accessibility]([#accessibility-since-v14]) section for details about labeling.
+| `swatches`       | `Swatch[]`              | `[]`           | Array of swatches, where each item is a color or an object with a color and optional label, invalid values default to #000.<br>See the [Accessibility](#accessibility) section for details about labeling.
 |
 | `toggleSwatches` | `boolean`               | `false`        | Adds a button to toggle the swatches container.                                                                                                                                         |
 | `colorOnScroll`  | `boolean`               | `false`        | Closes the popover picker on scroll.                                                                                                                                                    |
@@ -130,7 +130,7 @@ const alwan = new Alwan('#reference', {
 
 **Note:** _In the reference element you can access the CSS custom property `--color` (`--alwan-color` before `v2.0.0`) to get color value_
 
-#### Accessibility (since `v1.4`)
+#### Accessibility
 
 All interactive elements include ARIA labels with default values in English. These labels can be customized through the i18n option.
 
