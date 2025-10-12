@@ -130,7 +130,7 @@ const alwan = new Alwan('#reference', {
 
 **Note:** _In the reference element you can access the CSS custom property `--color` (`--alwan-color` before `v2.0.0`) to get color value_
 
-#### Accessibility
+### Accessibility
 
 All interactive elements include ARIA labels with default values in English. These labels can be customized through the i18n option.
 
