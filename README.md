@@ -122,7 +122,7 @@ const alwan = new Alwan('#reference', {
 | `opacity`        | `boolean`               | `true`         | Enables alpha channel for transparency.                                                                                                                                                 |
 | `preview`        | `boolean`               | `true`         | Adds a preview element for the selected color.                                                                                                                                          |
 | `copy`           | `boolean`               | `true`         | Adds a button to copy the selected color.                                                                                                                                               |
-| `swatches`       | `Swatch[]`              | `[]`           | Array of swatches, where each item is a color or an object with a color and optional label, invalid values default to #000.<br>_See the [Accessibility](#accessibility) section for details about labeling._ |
+| `swatches`       | `Swatch[]`              | `[]`           | Array of swatches, where each item is a color or an object with a color and optional label, invalid values default to `#000`.<br>_See the [Accessibility](#accessibility) section for details about labeling._ |
 | `toggleSwatches` | `boolean`               | `false`        | Adds a button to toggle the swatches container.                                                                                                                                         |
 | `colorOnScroll`  | `boolean`               | `false`        | Closes the popover picker on scroll.                                                                                                                                                    |
 | `parent`         | `string\|Element`       | `""`           | Selector or HTML element that the picker container is appended to.                                                                                                                      |
@@ -133,7 +133,7 @@ const alwan = new Alwan('#reference', {
 
 All interactive elements include ARIA labels with default values in English. These labels can be customized through the i18n option.
 
-**ℹ️ Note:**: _The title attribute of the copy button and the change-format button is identical to their ARIA label. For swatch buttons, the title attribute is set to the corresponding color value from the swatches array._
+**ℹ️ Note:**: _The title attribute of the copy button and the change-format button is identical to their ARIA label. For swatch buttons, the title attribute is set to the corresponding label or color value from the swatches array._
 
 ```javascript
 // i18n default values.
@@ -147,10 +147,18 @@ All interactive elements include ARIA labels with default values in English. The
             buttons: {
                 // ARIA label and title for the copy button.
                 copy: 'Copy color to clipboard',
+
                 // ARIA label and title for the change-format button.
                 changeFormat: 'Change color format',
-                // ARIA label for swatch buttons.
-                swatch: 'Color swatch',
+                
+                // Template for ARIA labels of swatch buttons. %label% is replaced with the swatch label or color value.
+                // The title (tooltip) shows the swatch label or color value.
+                // Example:
+                //   { color: '#008080', label: 'teal' }
+                //   ARIA label  => 'Color swatch: teal'
+                //   Title (tooltip) => 'teal'
+                swatch: 'Color swatch: %label%',
+
                 // ARIA label and title for the toggle-swatches button (since v2.0.0).
                 toggleSwatches: 'Toggle Swatches'
             },
