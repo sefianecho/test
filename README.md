@@ -151,12 +151,16 @@ All interactive elements include ARIA labels with default values in English. The
                 // ARIA label and title for the change-format button.
                 changeFormat: 'Change color format',
 
-                // Template for ARIA labels of swatch buttons, %label% is replaced with the swatch label or color value.
+                // Template for ARIA labels of swatch buttons. %label% is replaced with the swatch label or color value.
                 // The title (tooltip) shows the swatch label or color value.
-                // Example:
+                // Ex:
                 //   { color: '#008080', label: 'teal' }
-                //   ARIA label  => 'Color swatch: teal'
-                //   Title (tooltip) => 'teal'
+                //     ARIA label  => 'Color swatch: teal'
+                //     Title (tooltip) => 'teal'
+                // Or a color value only:
+                //   '#008080'
+                //     ARIA label  => 'Color swatch: #008080'
+                //     Title (tooltip) => '#008080'
                 swatch: 'Color swatch: %label%',
 
                 // ARIA label and title for the toggle-swatches button (since v2.0.0).
